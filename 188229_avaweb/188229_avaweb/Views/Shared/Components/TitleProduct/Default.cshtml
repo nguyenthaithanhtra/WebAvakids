@@ -1,0 +1,16 @@
+﻿@{ 
+    var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+}
+<div class="detail-title" data-id="258922" data-cateid="10421" data-scenrio="Sản phẩm bình thường không kịch bản" data-scenrioid="0">
+    <h3>
+        @Model.ProductName
+    </h3>
+</div>
+<div class="detail-top">
+    <div class="detail-price">
+        <span class="price-current">@String.Format(format, "{0:c0}", Model.Price)</span>
+        <span class="price-old">@String.Format(format, "{0:c0}", Model.PriceOld)</span>
+        <span class="price-percent">-29%</span>
+    </div>
+    <span class="product-code">@Model.ProductID</span>
+</div>

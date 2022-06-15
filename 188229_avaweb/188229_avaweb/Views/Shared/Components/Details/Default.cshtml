@@ -1,0 +1,64 @@
+﻿
+
+
+
+
+<ul class="info-article ">
+    <li>
+        <p class="text01">Thương hiệu</p>
+        <p class="text02">@Model.Tredemark</p>
+    </li>
+    <li>
+        <p class="text01">Loại</p>
+       
+
+    <p class="text02">
+        @foreach (var details in Model.type)
+        {
+            <span>@details.Nametype</span>}
+
+    </p>
+    </li>
+    <li>
+        <p class="text01">Độ tuổi</p>
+        <p class="text02">
+            @Model.Age
+
+
+        </p>
+    </li>
+    <li>
+        <p class="text01">Chất liệu</p>
+        <p class="text02">@Model.substance</p>
+    </li>
+    <li>
+        <p class="text01">Kích thước hộp</p>
+        <p class="text02">
+         @Model.Boxsize
+
+        </p>
+    </li>
+    <li>
+        <p class="text01">Trọng lượng</p>
+        <p class="text02">
+            @Model.Weight
+
+        </p>
+    </li>
+    <li>
+        <p class="text01">Lưu ý khi sử dụng</p>
+        <p class="text02">
+            @Model.Note
+
+
+        </p>
+    </li>
+    <li>
+        <p class="text01">Nơi sản xuất</p>
+        <p class="text02">
+            @Model.production
+           
+
+        </p>
+    </li>
+</ul>

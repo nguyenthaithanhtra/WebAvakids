@@ -1,0 +1,264 @@
+﻿@using avaweb.Models;
+@{
+    
+    var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+    //var tt = ViewData["Other"] as List<avaweb.Controllers.OtherProduct>;
+
+
+}
+@*@model Product*@
+
+
+
+<div class="Viewbigsize">
+    @*<ul class="breadcrumb">
+            <li>
+                <a href="https://www.avakids.com/do-choi">Đồ chơi </a>
+            </li>
+            <li>
+                <a href="https://www.avakids.com/do-choi-lego">Đồ chơi lego</a>
+            </li>
+        </ul>*@
+    <div class="breadcrumb">
+        <span><a href="#">@ViewBag.Hide</a> > <a href="#">@ViewBag.Hidehu</a></span>
+    </div>
+
+    <div class="header">
+
+
+        <div class="header_left">
+            <img id="item-img" src="~/image/@Model.Image" />
+
+            <div class="article content-t-wrap">
+                <div class="article__content showall review-post short">
+                    <h2 class="article__content__title">THÔNG TIN SẢN PHẨM</h2>
+                    <h3>Đặc điểm nổi bậc</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://www.avakids.com/do-choi/do-choi-tram-canh-sat-tuan-tra-cuu-hoa-bien-lego-city-60308" target="_blank" title="Xem thêm đồ chơi cảnh sát tuần tra và cứu hỏa Lego City 60308 (297 chi tiết)">Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308</a> bao gồm 297 chi tiết
+                        </li>
+                        <li>
+
+                            "Bé có thể sáng tạo và tưởng tượng câu chuyện của mình."
+                        </li>
+                        <li>
+
+                            <a href="https://www.avakids.com/do-choi-lap-rap" target="_blank" title="Xem thêm đồ chơi lắp ráp đang kinh doanh tại AVAKids">Đồ chơi láp ráp</a>&nbsp;giúp rèn luyện tính rỉ mỉ, sáng tạo của bé khi lắp ráp.
+                        </li>
+                        <li>
+
+                            <a href="https://www.avakids.com/do-choi-lego" target="_blank" title="Xem thêm đồ chơi Lego City đang kinh doanh tại AVAKids">Đồ chơi Lego City</a>&nbsp;không có góc nhọn, thành phần độc hại nên an toàn cho bé.
+                        </li>
+                    </ul>
+                    <h3>Hướng dẫn sử dụng&nbsp;</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://www.avakids.com/do-choi" target="_blank" title="Xem thêm đồ chơi đang kinh doanh tại AVAKids">Đồ chơi</a>&nbsp;không dùng pin
+                        </li>
+                        <li>
+
+                            "Lắp ráp các khớp nối với nhau theo hình trên bao bì."
+                        </li>
+                        <li>
+
+                            "Có thể sáng tạo theo trí tưởng tượng của bé."
+                        </li>
+                    </ul>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="header_right">
+
+            <div class="box_productInfor">
+                <div class="detail-title" data-id="258922" data-cateid="10421" data-scenrio="Sản phẩm bình thường không kịch bản" data-scenrioid="0">
+                    <h3>
+                        @Model.ProductName
+                    </h3>
+                </div>
+
+
+                <div class="detail-top">
+                    <div class="detail-price">
+                        <span class="price-current">@String.Format(format, "{0:c0}", Model.Price)</span>
+                        <span class="price-old">@String.Format(format, "{0:c0}", Model.PriceOld)</span>
+                        <span class="price-percent">-29%</span>
+                    </div>
+                    <span class="product-code">@Model.ProductID</span>
+                </div>
+                <div class="hide">
+                    <div class="select-color"></div>
+                </div>
+                <div class="box-promo fInter">
+                    <p class="box-promo-txt">Khuyến mãi  (Đến 31/05)</p>
+                    <ul class="box-promo-list">
+                        <li class="divb t1" data-promotion="1017164" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+
+                            Nhập mã AVAKID giảm 10% tối đa 100.000đ cho đơn hàng từ 300.000đ trở lên khi thanh toán qua Ví Moca trên ứng dụng Grab
+                            <a href="https://www.avakids.com/tin-tuc/nhap-ma-avakids-giam-gia-qua-vi-moca-1411900" target="_blank">(Click để xem chi tiết)</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="detail-btn">
+                    @*<a class="btn btn-addcart" id="btn-addcart" data-id="258922" data-code="9885076000128">
+                            <p class="txt">THÊM VÀO GIỎ</p>
+                        </a>*@
+                    <button class="buy">THÊM VÀO GIỎ</button>
+                    <button class="showroom">XEM CỬA HÀNG CÒN HÀNG</button>
+                </div>
+
+
+
+
+            </div>
+            <ul class="policy">
+                <li class="doitra">
+                    <div class="icon1">
+                        <i class="icon-doitra"></i>
+                    </div>
+                    <p>Không áp dụng đổi trả, bảo hành (Không bao gồm xe đồ chơi điều khiển) <a href="https://www.avakids.com/bao-hanh-doi-tra">Xem chi tiết</a></p>
+                </li>
+                <li class=" ">
+                    <div class="iconl">
+                        <i class="icon-mienphigh"></i>
+                    </div>
+                    <p>Miễn phí giao hàng đơn từ 500.000đ trong 10km đầu tiên</p>
+                </li>
+                <li class=" ">
+                    <div class="">
+                        <i class="icon-cod"></i>
+                    </div>
+                    <p>Giao hàng thu tiền, thanh toán online nhiều phương thức</p>
+                </li>
+                <li class=" ">
+                    <div class="iconl">
+                        <i class="icon-phone"></i>
+                    </div>
+                    <p>
+                        Tổng đài: <a href="1900.866.874">1900.866.874</a>
+                        <br>(7h30 - 22h00)
+                    </p>
+                </li>
+            </ul>
+            <div class="info__item spec_article">
+                <p class="info-title">Thông tin chi tiết</p>
+                <div class="info-content">
+                    <ul class="info-article ">
+                        <li>
+                            <p class="text01">Thương hiệu</p>
+                            <p class="text02">Lego (Đan Mạch)</p>
+                        </li>
+                        <li>
+                            <p class="text01">Loại</p>
+                            <p class="text02">
+                                <span>Đồ chơi bé trai</span>
+                                <span>Đồ chơi lắp ráp</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text01">Độ tuổi</p>
+                            <p class="text02">
+                                Từ 5 tuổi trở lên
+
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text01">Chất liệu</p>
+                            <p class="text02">Nhựa</p>
+                        </li>
+                        <li>
+                            <p class="text01">Kích thước hộp</p>
+                            <p class="text02">
+                                38x26x6 cm
+
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text01">Trọng lượng</p>
+                            <p class="text02">
+                                724 g
+
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text01">Lưu ý khi sử dụng</p>
+                            <p class="text02">
+                                Có các chi tiết nhỏ, không dùng cho trẻ dưới 3 tuổi, tránh nguy cơ tiềm ẩn khi trẻ sử dụng sai
+
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text01">Nơi sản xuất</p>
+                            <p class="text02">
+                                Trung Quốc
+
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="dochoikhac">
+        <h4 class="detail-product-ttl">Đồ chơi khác</h4>
+
+        <div class="lass">
+
+            @foreach (var other in Model.OtherProduct)
+            {
+                <div class="detail-product">
+                    @*<h4 class="detail-product-ttl">Đồ chơi khác</h4>*@
+                    <div class="box-common__content">
+                        <div class="other-product-item">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="item-img">
+                                        <img src="~/image/@other.Images" />
+
+                                    </div>
+
+                                    <div class="item-content">
+                                        <h3>@other.Names</h3>
+                                        <p class="item-price">@String.Format(format, "{0:c0}", other.Prices)</p>
+                                        <div class="boxprice">
+                                            <p class="price-old">@String.Format(format, "{0:c0}", other.PriceOlds)</p>
+                                            <span class="percent">20%</span>
+                                        </div>
+                                    </div>
+
+                                </a>
+                                <div class="buy-btn">
+                                    <button>Chọn mua</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>}
+        </div>
+    </div>
+    <div class="comment">
+        <b class="cmttitle">Hỏi đáp về Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 (297 chi tiết)</b>
+        <div class="group-cm">
+            <textarea name="txtContent" rows="1" maxlength="1000" required="required" placeholder="Mời bạn bình luận hoặc đặt câu hỏi" class="extend"></textarea>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+

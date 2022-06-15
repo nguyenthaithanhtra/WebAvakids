@@ -1,0 +1,45 @@
+﻿
+
+
+
+@{ 
+    var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+
+}
+<h4 class="detail-product-ttl">Đồ chơi khác</h4>
+
+<div class="lass">
+
+    @foreach (var other in Model.OtherProduct)
+    {
+        <div class="detail-product">
+
+            <div class="box-common__content">
+                <div class="other-product-item">
+                    <div class="item">
+                        <a href="/sanpham/sp-@other.ProductID">
+                            <div class="item-img">
+                                <img src="~/image/@other.Image" />
+
+                            </div>
+
+                            <div class="item-content">
+                                <h3>
+                                    @other.ProductName
+                                </h3>
+                                <p class="item-price">@String.Format(format, "{0:c0}", other.Price)</p>
+                                <div class="boxprice">
+                                    <p class="price-old">@String.Format(format, "{0:c0}", other.PriceOld)</p>
+                                    <span class="percent">20%</span>
+                                </div>
+                            </div>
+
+                        </a>
+                        <div class="buy-btn">
+                            <button>Chọn mua</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>}
+</div>

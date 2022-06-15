@@ -1,0 +1,118 @@
+﻿@using avaweb.Models
+
+
+
+@{
+    Layout = "_Layout";
+
+    ViewData["Title"] = "Sanpham";
+
+    var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+
+}
+
+<div class="Viewbigsize">
+    <div class="breadcrumb">
+        <span><a href="#">@ViewBag.Hide</a> > <a href="#">@ViewBag.Hidehu</a></span>
+    </div>
+
+    <div class="header">
+
+
+        <div class="header_left">
+            @await Component.InvokeAsync("MainHead",ViewBag.Page)
+
+
+            <div class="article content-t-wrap">
+                <div class="article__content showall review-post short">
+                    <h2 class="article__content__title">THÔNG TIN SẢN PHẨM</h2>
+                    <h3>Đặc điểm nổi bậc</h3>
+                  @await Component.InvokeAsync("Outstanding", ViewBag.Page)
+                    <h3>Hướng dẫn sử dụng&nbsp;</h3>
+                  @await Component.InvokeAsync("Manual", ViewBag.Page)
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="header_right">
+
+            <div class="box_productInfor">
+                @await Component.InvokeAsync("TitleProduct", ViewBag.Page)
+               
+                <div class="hide">
+                    <div class="select-color"></div>
+                </div>
+                <div class="box-promo fInter">
+                    <p class="box-promo-txt">Khuyến mãi  (Đến 31/05)</p>
+                    <ul class="box-promo-list">
+                        <li class="divb t1" data-promotion="1017164" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+
+                            Nhập mã AVAKID giảm 10% tối đa 100.000đ cho đơn hàng từ 300.000đ trở lên khi thanh toán qua Ví Moca trên ứng dụng Grab
+                            <a href="https://www.avakids.com/tin-tuc/nhap-ma-avakids-giam-gia-qua-vi-moca-1411900" target="_blank">(Click để xem chi tiết)</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="detail-btn">                  
+                    <button class="buy">THÊM VÀO GIỎ</button>
+                    <button class="showroom">XEM CỬA HÀNG CÒN HÀNG</button>
+                </div>
+            </div>
+            <ul class="policy">
+                <li class="doitra">
+                    <div class="icon1">
+                        <i class="icon-doitra"></i>
+                    </div>
+                    <p>Không áp dụng đổi trả, bảo hành (Không bao gồm xe đồ chơi điều khiển) <a href="https://www.avakids.com/bao-hanh-doi-tra">Xem chi tiết</a></p>
+                </li>
+                <li class=" ">
+                    <div class="iconl">
+                        <i class="icon-mienphigh"></i>
+                    </div>
+                    <p>Miễn phí giao hàng đơn từ 500.000đ trong 10km đầu tiên</p>
+                </li>
+                <li class=" ">
+                    <div class="">
+                        <i class="icon-cod"></i>
+                    </div>
+                    <p>Giao hàng thu tiền, thanh toán online nhiều phương thức</p>
+                </li>
+                <li class=" ">
+                    <div class="iconl">
+                        <i class="icon-phone"></i>
+                    </div>
+                    <p>
+                        Tổng đài: <a href="1900.866.874">1900.866.874</a>
+                        <br>(7h30 - 22h00)
+                    </p>
+                </li>
+            </ul>
+            <div class="info__item spec_article">
+                <p class="info-title">Thông tin chi tiết</p>
+                <div class="info-content">
+                    @await Component.InvokeAsync("Details", ViewBag.Page)
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="dochoikhac">
+        @await Component.InvokeAsync("OtherProduct", ViewBag.Page)
+    
+    </div>
+    <div class="comment">
+        @await Component.InvokeAsync("Comment", ViewBag.Page)
+
+    </div>
+
+
+</div>
